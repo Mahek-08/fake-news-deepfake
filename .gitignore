@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.pkl
+uploads/
+.env
+*.h5
+*.mp4
+*.avi
+*.jpg
+*.png
+*.csv

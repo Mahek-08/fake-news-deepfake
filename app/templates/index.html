@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Media Authenticity</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: #f9fafb;
+    }
+    .card {
+      border-radius: 1rem;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body class="container py-5">
+  <h1 class="mb-4 text-center">🔍 AI Media Authenticity Checker</h1>
+
+  <!-- Fake News Section -->
+  <div class="card p-4 mb-4">
+    <h4>📰 Fake News (Text)</h4>
+    <form action="/check_text" method="POST">
+      <textarea name="news_text" class="form-control mb-3" rows="4" placeholder="Paste news article text here..."></textarea>
+      <button type="submit" class="btn btn-primary">Check Text</button>
+    </form>
+  </div>
+
+  <!-- Deepfake (Image/Video) Section -->
+  <div class="card p-4">
+    <h4>🎭 Deepfake Detection (Image/Video)</h4>
+    <form action="/check_media" method="POST" enctype="multipart/form-data">
+      <input type="file" name="file" class="form-control mb-3" accept="image/*,video/*">
+      <button type="submit" class="btn btn-danger">Upload & Check</button>
+    </form>
+  </div>
+</body>
+</html>

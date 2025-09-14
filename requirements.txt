@@ -1,0 +1,15 @@
+flask
+pandas
+numpy
+scikit-learn
+nltk
+joblib
+tensorflow>=2.6
+opencv-python
+mtcnn
+dlib
+keras
+transformers
+torch
+torchvision
+tqdm

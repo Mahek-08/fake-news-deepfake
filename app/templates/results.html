@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Results</title>
+  </head>
+  <body>
+    <h1>Results</h1>
+    {% if mode == 'text' %}
+      <h2>Text prediction</h2>
+      <p>Input: {{ input_text }}</p>
+      <p>Label: {{ result['label'] }} — Score: {{ result['score'] }}</p>
+    {% elif mode == 'video' %}
+      <h2>Video prediction</h2>
+      <p>File: {{ filename }}</p>
+      <p>Label: {{ result['label'] }} — Score: {{ result['score'] }}</p>
+    {% endif %}
+    <a href="/">Back</a>
+  </body>
+</html>
